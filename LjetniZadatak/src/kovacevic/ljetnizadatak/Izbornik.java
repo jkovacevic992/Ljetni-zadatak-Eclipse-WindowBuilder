@@ -1,9 +1,9 @@
 package kovacevic.ljetnizadatak;
 
-import java.awt.BorderLayout;
+
 import java.awt.Color;
 import java.awt.Desktop;
-import java.awt.EventQueue;
+
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -23,6 +23,7 @@ public class Izbornik extends JFrame {
 	 * Create the frame.
 	 */
 	public Izbornik() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -39,14 +40,32 @@ public class Izbornik extends JFrame {
 		pnlIzbornik.setLayout(null);
 
 		JButton btnPenjalista = new JButton("Penjali\u0161ta");
+		btnPenjalista.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				 Penjalista penjaliste = new Penjalista();
+			        penjaliste.setVisible(true);
+			}
+		});
 		btnPenjalista.setBounds(10, 11, 122, 23);
 		pnlIzbornik.add(btnPenjalista);
 
 		JButton btnAutori = new JButton("Autori");
+		btnAutori.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Autori autor = new Autori();
+		        autor.setVisible(true);
+			}
+		});
 		btnAutori.setBounds(10, 45, 122, 23);
 		pnlIzbornik.add(btnAutori);
 
 		JButton btnPenjaci = new JButton("Penja\u010Di");
+		btnPenjaci.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Penjaci osoba = new Penjaci();
+		        osoba.setVisible(true);
+			}
+		});
 		btnPenjaci.setBounds(10, 79, 122, 23);
 		pnlIzbornik.add(btnPenjaci);
 
@@ -55,7 +74,7 @@ public class Izbornik extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Desktop.getDesktop().browse(new URL(
-							"https://github.com/jkovacevic992/Ljetni-zadatak/tree/master/LjetniZadatak/src/kovacevic/ljetnizadatak")
+							"https://github.com/jkovacevic992/Ljetni-zadatak-Eclipse-WindowBuilder")
 									.toURI());
 				} catch (URISyntaxException | IOException ex) {
 					ex.printStackTrace();
