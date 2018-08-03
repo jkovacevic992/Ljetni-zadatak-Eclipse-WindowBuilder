@@ -13,6 +13,10 @@ public class Penjaci extends JFrame {
 
 	
 	public Penjaci() {
+		
+	}
+	
+	private void initComponents() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
