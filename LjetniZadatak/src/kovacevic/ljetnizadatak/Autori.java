@@ -49,7 +49,7 @@ public class Autori extends JFrame {
 	public Autori() {
 		initComponents();
 		getContentPane().setBackground(Color.decode("#082F4E"));
-        pnlPodaci.setBackground(Color.decode("#082F4E"));
+
 		 try {
 	            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 	        } catch (Exception ex) {
