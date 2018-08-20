@@ -26,7 +26,7 @@ public class Izbornik extends JFrame {
 	public Izbornik() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 526, 381);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -35,7 +35,7 @@ public class Izbornik extends JFrame {
 		contentPane.setLayout(null);
 
 		JPanel pnlIzbornik = new JPanel();
-		pnlIzbornik.setBounds(0, 0, 424, 250);
+		pnlIzbornik.setBounds(10, 0, 479, 331);
 		contentPane.add(pnlIzbornik);
 		pnlIzbornik.setBackground(Color.decode("#082F4E"));
 		pnlIzbornik.setLayout(null);
@@ -105,7 +105,7 @@ public class Izbornik extends JFrame {
 		pnlIzbornik.add(btnZatvori);
 		
 		JLabel lblSlika = new JLabel("New label");
-		lblSlika.setBounds(210, 83, 46, 14);
+		lblSlika.setBounds(161, 11, 283, 309);
 		pnlIzbornik.add(lblSlika);
 		lblSlika.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kovacevic/ljetnizadatak/climber1.png")));
 		
