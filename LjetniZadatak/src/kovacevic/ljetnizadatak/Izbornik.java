@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class Izbornik extends JFrame {
 
@@ -102,5 +103,12 @@ public class Izbornik extends JFrame {
 		});
 		btnZatvori.setBounds(10, 181, 122, 23);
 		pnlIzbornik.add(btnZatvori);
+		
+		JLabel lblSlika = new JLabel("New label");
+		lblSlika.setBounds(210, 83, 46, 14);
+		pnlIzbornik.add(lblSlika);
+		lblSlika.setIcon(new javax.swing.ImageIcon(getClass().getResource("/kovacevic/ljetnizadatak/climber1.png")));
+		
+	
 	}
 }
