@@ -37,6 +37,7 @@ import javax.swing.JTextPane;
 import java.awt.Dimension;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.event.ListSelectionEvent;
+import java.awt.Font;
 
 public class Autori extends JFrame {
 
@@ -98,32 +99,35 @@ public class Autori extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel pnlPodaci = new JPanel();
-		pnlPodaci.setBounds(169, 11, 328, 274);
+		pnlPodaci.setBounds(169, 11, 359, 274);
 		contentPane.add(pnlPodaci);
 		pnlPodaci.setLayout(null);
 		pnlPodaci.setBackground(Color.decode("#082F4E"));
 		
 		JLabel lblIme = new JLabel("Ime");
+		lblIme.setFont(new Font("Poppins", Font.PLAIN, 12));
 		lblIme.setForeground(Color.WHITE);
-		lblIme.setBounds(10, 11, 46, 14);
+		lblIme.setBounds(10, 11, 69, 14);
 		pnlPodaci.add(lblIme);
 		
 		txtIme = new JTextField();
-		txtIme.setBounds(10, 36, 283, 20);
+		txtIme.setBounds(10, 36, 317, 20);
 		pnlPodaci.add(txtIme);
 		txtIme.setColumns(10);
 		
 		txtPrezime = new JTextField();
-		txtPrezime.setBounds(10, 92, 283, 20);
+		txtPrezime.setBounds(10, 92, 317, 20);
 		pnlPodaci.add(txtPrezime);
 		txtPrezime.setColumns(10);
 		
 		JLabel lblPrezime = new JLabel("Prezime");
+		lblPrezime.setFont(new Font("Poppins", Font.PLAIN, 12));
 		lblPrezime.setForeground(Color.WHITE);
-		lblPrezime.setBounds(10, 67, 46, 14);
+		lblPrezime.setBounds(10, 67, 89, 14);
 		pnlPodaci.add(lblPrezime);
 		
 		JButton btnDodaj = new JButton("Dodaj");
+		btnDodaj.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnDodaj.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				 try {
@@ -159,10 +163,11 @@ public class Autori extends JFrame {
 				
 			}
 		});
-		btnDodaj.setBounds(10, 229, 89, 23);
+		btnDodaj.setBounds(10, 229, 99, 23);
 		pnlPodaci.add(btnDodaj);
 		
 		JButton btnObrisi = new JButton("Obri\u0161i");
+		btnObrisi.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnObrisi.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 Autor a = lstAutori.getSelectedValue();
@@ -190,10 +195,11 @@ public class Autori extends JFrame {
 			        }
 			}
 		});
-		btnObrisi.setBounds(204, 229, 89, 23);
+		btnObrisi.setBounds(228, 229, 99, 23);
 		pnlPodaci.add(btnObrisi);
 		
 		JButton btnPromjena = new JButton("Promjena");
+		btnPromjena.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnPromjena.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Autor a = lstAutori.getSelectedValue();
@@ -228,7 +234,7 @@ public class Autori extends JFrame {
 		        }
 			}
 		});
-		btnPromjena.setBounds(105, 229, 89, 23);
+		btnPromjena.setBounds(119, 229, 99, 23);
 		pnlPodaci.add(btnPromjena);
 		
 		JScrollPane scrollPane = new JScrollPane();

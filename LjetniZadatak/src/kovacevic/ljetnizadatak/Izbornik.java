@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import java.awt.Font;
 
 public class Izbornik extends JFrame {
 
@@ -41,6 +42,7 @@ public class Izbornik extends JFrame {
 		pnlIzbornik.setLayout(null);
 
 		JButton btnPenjalista = new JButton("Penjali\u0161ta");
+		btnPenjalista.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnPenjalista.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				 Penjalista penjaliste = new Penjalista();
@@ -51,6 +53,7 @@ public class Izbornik extends JFrame {
 		pnlIzbornik.add(btnPenjalista);
 
 		JButton btnAutori = new JButton("Autori");
+		btnAutori.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnAutori.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Autori autor = new Autori();
@@ -61,6 +64,7 @@ public class Izbornik extends JFrame {
 		pnlIzbornik.add(btnAutori);
 
 		JButton btnPenjaci = new JButton("Penja\u010Di");
+		btnPenjaci.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnPenjaci.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Penjaci osoba = new Penjaci();
@@ -71,6 +75,7 @@ public class Izbornik extends JFrame {
 		pnlIzbornik.add(btnPenjaci);
 
 		JButton btnGit = new JButton("GitHub");
+		btnGit.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnGit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -86,6 +91,7 @@ public class Izbornik extends JFrame {
 		pnlIzbornik.add(btnGit);
 
 		JButton btnEra = new JButton("ERA dijagram");
+		btnEra.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnEra.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Slika s = new Slika();
@@ -96,6 +102,7 @@ public class Izbornik extends JFrame {
 		pnlIzbornik.add(btnEra);
 
 		JButton btnZatvori = new JButton("Zatvori");
+		btnZatvori.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnZatvori.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();

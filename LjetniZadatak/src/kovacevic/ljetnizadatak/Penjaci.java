@@ -35,6 +35,7 @@ import javax.swing.event.ListSelectionListener;
 import com.mysql.cj.util.StringUtils;
 
 import javax.swing.event.ListSelectionEvent;
+import java.awt.Font;
 
 public class Penjaci extends JFrame {
 
@@ -65,50 +66,54 @@ public class Penjaci extends JFrame {
 		pnlPodaci = new javax.swing.JPanel();
 		lstPenjaci = new javax.swing.JList<>();
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 502, 301);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		getContentPane().setLayout(null);
+		contentPane.setLayout(null);
 
 		JPanel pnlPodaci = new JPanel();
-		pnlPodaci.setBounds(123, 11, 301, 220);
+		pnlPodaci.setBounds(123, 11, 357, 240);
 		getContentPane().add(pnlPodaci);
 		pnlPodaci.setLayout(null);
 		pnlPodaci.setBackground(Color.decode("#082F4E"));
 
 		JLabel lblIme = new JLabel("Ime");
+		lblIme.setFont(new Font("Poppins", Font.PLAIN, 12));
 		lblIme.setForeground(Color.WHITE);
 		lblIme.setBounds(10, 11, 46, 14);
 		pnlPodaci.add(lblIme);
 
 		JLabel lblPrezime = new JLabel("Prezime");
+		lblPrezime.setFont(new Font("Poppins", Font.PLAIN, 12));
 		lblPrezime.setForeground(Color.WHITE);
 		lblPrezime.setBounds(10, 71, 70, 14);
 		pnlPodaci.add(lblPrezime);
 
 		JLabel lblRezultat = new JLabel("Rezultat");
+		lblRezultat.setFont(new Font("Poppins", Font.PLAIN, 12));
 		lblRezultat.setForeground(Color.WHITE);
-		lblRezultat.setBounds(10, 119, 70, 14);
+		lblRezultat.setBounds(10, 134, 70, 14);
 		pnlPodaci.add(lblRezultat);
 
 		txtIme = new JTextField();
-		txtIme.setBounds(10, 36, 281, 20);
+		txtIme.setBounds(10, 36, 332, 20);
 		pnlPodaci.add(txtIme);
 		txtIme.setColumns(10);
 
 		txtPrezime = new JTextField();
-		txtPrezime.setBounds(10, 96, 281, 20);
+		txtPrezime.setBounds(10, 96, 332, 20);
 		pnlPodaci.add(txtPrezime);
 		txtPrezime.setColumns(10);
 
 		txtRezultat = new JTextField();
-		txtRezultat.setBounds(10, 144, 281, 20);
+		txtRezultat.setBounds(10, 159, 332, 20);
 		pnlPodaci.add(txtRezultat);
 		txtRezultat.setColumns(10);
 
 		JButton btnDodaj = new JButton("Dodaj");
+		btnDodaj.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnDodaj.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -139,10 +144,11 @@ public class Penjaci extends JFrame {
 		        }
 			}
 		});
-		btnDodaj.setBounds(7, 186, 89, 23);
+		btnDodaj.setBounds(10, 206, 104, 23);
 		pnlPodaci.add(btnDodaj);
 
 		JButton btnPromjena = new JButton("Promjena");
+		btnPromjena.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnPromjena.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Penjac p = lstPenjaci.getSelectedValue();
@@ -177,10 +183,11 @@ public class Penjaci extends JFrame {
 		        }
 			}
 		});
-		btnPromjena.setBounds(106, 186, 89, 23);
+		btnPromjena.setBounds(124, 206, 104, 23);
 		pnlPodaci.add(btnPromjena);
 
 		JButton btnObrisi = new JButton("Obri\u0161i");
+		btnObrisi.setFont(new Font("Poppins", Font.PLAIN, 12));
 		btnObrisi.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Penjac p = lstPenjaci.getSelectedValue();
@@ -208,7 +215,7 @@ public class Penjaci extends JFrame {
 		        }
 			}
 		});
-		btnObrisi.setBounds(202, 186, 89, 23);
+		btnObrisi.setBounds(238, 206, 104, 23);
 		pnlPodaci.add(btnObrisi);
 
 		JScrollPane scrollPane = new JScrollPane();
